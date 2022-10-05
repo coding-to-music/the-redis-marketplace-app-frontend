@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "lint": "eslint --fix .",
+    "deploy": "git add . && git commit -m Build && git push",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
