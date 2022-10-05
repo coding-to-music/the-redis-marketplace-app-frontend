@@ -28,6 +28,24 @@ git remote add origin git@github.com:coding-to-music/the-redis-marketplace-app-f
 git push -u origin main
 ```
 
+## NPM install issues
+
+```
+npm i --legacy-peer-deps
+```
+
+Output
+
+```
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'redis-marketplace@0.1.0',
+npm WARN EBADENGINE   required: { node: 'v18.6.0', npm: ' v8.13.2' },
+npm WARN EBADENGINE   current: { node: 'v18.10.0', npm: '8.19.2' }
+npm WARN EBADENGINE }
+
+up to date, audited 477 packages in 1s
+```
+
 # Deploying Docusaurus to Cloudflare Pages
 
 Docusaurus is a commonly used static site generator. It is built on top of react and can be used to make any kind of site (personal website, product, blog, marketing landing pages, etc).
@@ -90,7 +108,6 @@ Redirecting www to apex domain https://developers.cloudflare.com/pages/how-to/ww
 - staging: https://marketplace-client-staging.herokuapp.com
 - production: https://marketplace.redis.com/
 
-
 ## Setup
 
 Create a `.env.local` file with an `API_URL`:
@@ -102,7 +119,6 @@ cp .env.example .env.local
 ## Starting the app
 
 1. Start the API and a Redis container locally: [Backend with Redisearch](https://github.com/RisingStack/redislab-marketplace-backend)
-
 
 2. Run the development server:
 
@@ -144,7 +160,7 @@ https://dashboard.heroku.com/apps/marketplace-client-production
 
 - `API_URL`: The URI for the backend application. (E.g. the staging URI: `https://marketplace-backend-staging-a.herokuapp.com/`)
 
-In heroku this is configured at: https://dashboard.heroku.com/apps/marketplace-client-staging/settings 
+In heroku this is configured at: https://dashboard.heroku.com/apps/marketplace-client-staging/settings
 
 ![image](https://user-images.githubusercontent.com/6561205/117840572-9460e900-b27c-11eb-800e-2a7254984024.png)
 
@@ -153,6 +169,7 @@ In heroku this is configured at: https://dashboard.heroku.com/apps/marketplace-c
 ### `/pages/index.js`
 
 Our index page. It handles the project filtering and querying and mounts the core blocks of the app:
+
 - Static Header with a menu bar
 - Hero with the search bar
 - Filter bar with tags on the left side of the page.
@@ -186,11 +203,13 @@ This repo has automatic staging and production deployment turned on via Heroku. 
 You can test out the built code locally with the following commands.
 
 Build the code
+
 ```bash
 npm run build
 ```
 
 Start the app
+
 ```bash
 npm run start -p 3000
 ```
@@ -200,23 +219,25 @@ npm run start -p 3000
 This project uses eslint and prettier to keep the code formatting and style consistent. If you are using VSCode, it should automatically format and lint everything on save.
 
 To run the linter manually use:
+
 ```bash
 npm run lint
 ```
 
 To run the formatter manually use:
+
 ```bash
 npm run format
 ```
 
 Husky should also automatically format and lint everything before a commit.
 
-
 ## Application purpose:
 
 To create a marketplace site so developers can search and browse through various Redis sample projects and find specific examples for their needs with the help of Redisearch.
 
 ## Core dependencies used for building the UI:
+
 - [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 - [react](https://reactjs.org/)
 - [material-ui](https://material-ui.com/)
