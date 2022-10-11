@@ -13,7 +13,7 @@ From / By https://github.com/redis-developer/the-redis-marketplace-app-frontend
 ## Environment variables:
 
 ```java
-
+# `API_URL`: The URI for the backend application. (E.g. the staging URI: `https://marketplace-backend-staging-a.herokuapp.com/`)
 ```
 
 ## GitHub
