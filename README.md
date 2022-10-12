@@ -4,6 +4,10 @@
 
 https://the-redis-marketplace-app-frontend.pages.dev
 
+https://the-redis-marketplace-app-backend.vercel.app/
+
+https://the-redis-marketplace-app-frontend.vercel.app/
+
 https://github.com/coding-to-music/the-redis-marketplace-app-frontend
 
 https://the-redis-marketplace-app-frontend.vercel.app
