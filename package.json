@@ -54,6 +54,6 @@
     ]
   },
   "engines": {
-    "node": "v16x"
+    "node": "16x"
   }
 }
